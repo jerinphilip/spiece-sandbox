@@ -23,8 +23,7 @@ void print(std::string label, const std::string &reference,
 
 int main() {
   sentencepiece::SentencePieceProcessor processor;
-  const auto status = processor.Load(
-      "/home/jerin/code/uedin/browsermt/mts/models/pl.32768.spm");
+  const auto status = processor.Load("data/ende.student.tiny11/vocab.deen.spm");
   if (!status.ok()) {
     std::cerr << status.ToString() << std::endl;
     // error
